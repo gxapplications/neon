@@ -1,4 +1,4 @@
-![Neon CSS](test/assets/neon-css.png)
+![Neon CSS](docs/assets/neon-css.png)
 
 _CSS library built from Bulma.io_
 
