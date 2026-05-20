@@ -1,0 +1,83 @@
+.button {
+  &:not(.is-outlined) {
+    background-image: linear-gradient(to bottom, hsl(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta))), hsl(var(--bulma-button-h), var(--bulma-button-s), calc((var(--bulma-button-background-l) + var(--bulma-button-background-l-delta)) / 2)));
+  }
+
+  &.is-outlined {
+    background-color: hsl(var(--bulma-link-h), var(--bulma-link-s), calc(var(--bulma-link-l) / 2), 0.6);
+  }
+
+  &.hatching {
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        hsla(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta)), 55%) 10px,
+        hsla(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta)), 26%) 20px
+    ),
+    linear-gradient(
+        to bottom,
+        hsla(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta)), 70%),
+        hsla(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta)), 40%)
+    ) !important;
+
+    &.is-outlined {
+      background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 10px,
+          hsla(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta)), 29%) 10px,
+          hsla(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta)), 12%) 20px
+      ),
+      linear-gradient(
+          to bottom,
+          hsla(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta)), 0%),
+          hsla(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta)), 15%)
+      ) !important;
+      --bulma-button-border-width: 1px !important;
+    }
+  }
+
+  &:hover {
+    box-shadow: hsla(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta)), 30%) 0 0 8px;
+    text-shadow: hsl(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta))) 0 0 9px;
+
+    &.is-outlined::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: inherit;
+      height: inherit;
+      background-image: radial-gradient(circle, hsla(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta)), 0%) 50%, hsla(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta)), 30%));
+    }
+  }
+  &:active {
+    box-shadow: hsla(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta)), 30%) 0 0 11px 3px;
+    text-shadow: hsl(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta))) 0 0 10px;
+
+    &.is-outlined::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: inherit;
+      height: inherit;
+      background-image: radial-gradient(circle, hsla(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta)), 0%) 38%, hsla(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta)), 30%));
+    }
+  }
+
+  &.compact {
+    padding: 0.1rem;
+    border-width: 1px;
+
+    &.is-flex-direction-column {
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+    }
+  }
+}

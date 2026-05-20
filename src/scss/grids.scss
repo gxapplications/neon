@@ -1,0 +1,85 @@
+@container bulma-fixed-grid (max-width: 768px) {
+  .fixed-grid.has-6-cols-mobile > .grid {
+    & > :nth-child(6n + 1) {
+      & .is-middle-column-in-grid {
+        display: none !important;
+      }
+      & .is-last-column-in-grid {
+        display: none !important;
+      }
+    }
+    & > :not(:nth-child(6n + 1)):not(:nth-child(6n + 6)) {
+      & .is-first-column-in-grid {
+        display: none !important;
+      }
+      & .is-last-column-in-grid {
+        display: none !important;
+      }
+    }
+    & > :nth-child(6n + 6) {
+      & .is-first-column-in-grid {
+        display: none !important;
+      }
+      & .is-middle-column-in-grid {
+        display: none !important;
+      }
+    }
+  }
+}
+
+@container bulma-fixed-grid (min-width: 769px) and (max-width: 1023px) {
+  .fixed-grid.has-9-cols-tablet > .grid {
+    & > :nth-child(9n + 1) {
+      & .is-middle-column-in-grid {
+        display: none !important;
+      }
+      & .is-last-column-in-grid {
+        display: none !important;
+      }
+    }
+    & > :not(:nth-child(9n + 1)):not(:nth-child(9n + 9)) {
+      & .is-first-column-in-grid {
+        display: none !important;
+      }
+      & .is-last-column-in-grid {
+        display: none !important;
+      }
+    }
+    & > :nth-child(9n + 9) {
+      & .is-first-column-in-grid {
+        display: none !important;
+      }
+      & .is-middle-column-in-grid {
+        display: none !important;
+      }
+    }
+  }
+}
+@container bulma-fixed-grid (min-width: 1024px) {
+  .fixed-grid.has-12-cols-desktop > .grid {
+    & > :nth-child(12n + 1) {
+      & .is-middle-column-in-grid {
+        display: none !important;
+      }
+      & .is-last-column-in-grid {
+        display: none !important;
+      }
+    }
+    & > :not(:nth-child(12n + 1)):not(:nth-child(12n + 12)) {
+      & .is-first-column-in-grid {
+        display: none !important;
+      }
+      & .is-last-column-in-grid {
+        display: none !important;
+      }
+    }
+    & > :nth-child(12n + 12) {
+      & .is-first-column-in-grid {
+        display: none !important;
+      }
+      & .is-middle-column-in-grid {
+        display: none !important;
+      }
+    }
+  }
+}

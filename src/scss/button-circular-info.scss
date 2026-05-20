@@ -1,0 +1,96 @@
+.button.active:has(div.button-circular-info), .button:active:has(div.button-circular-info) {
+  z-index: 3;
+}
+.button > div.button-circular-info {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  transform: rotate(-60deg);
+  text-shadow: black 0 0 1px, black 0 0 2px, black 0 0 4px, black 0 0 6px;
+
+  & > div.progress-pie {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    & > svg {
+      width: 0px;
+      height: 0px;
+    }
+  }
+}
+.button.active > div.button-circular-info, .button:active > div.button-circular-info {
+  --bulma-fade-05: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-l), .5);
+  --bulma-fade-07: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-l), .7);
+
+  &.is-primary {
+    --bulma-fade-05: hsla(var(--bulma-primary-h), var(--bulma-primary-s), var(--bulma-primary-l), .5);
+    --bulma-fade-07: hsla(var(--bulma-primary-h), var(--bulma-primary-s), var(--bulma-primary-l), .7);
+  }
+  &.is-info {
+    --bulma-fade-05: hsla(var(--bulma-info-h), var(--bulma-info-s), var(--bulma-info-l), .5);
+    --bulma-fade-07: hsla(var(--bulma-info-h), var(--bulma-info-s), var(--bulma-info-l), .7);
+  }
+  &.is-success {
+    --bulma-fade-05: hsla(var(--bulma-success-h), var(--bulma-success-s), var(--bulma-success-l), .5);
+    --bulma-fade-07: hsla(var(--bulma-success-h), var(--bulma-success-s), var(--bulma-success-l), .7);
+  }
+  &.is-warning {
+    --bulma-fade-05: hsla(var(--bulma-warning-h), var(--bulma-warning-s), var(--bulma-warning-l), .5);
+    --bulma-fade-07: hsla(var(--bulma-warning-h), var(--bulma-warning-s), var(--bulma-warning-l), .7);
+  }
+  &.is-danger {
+    --bulma-fade-05: hsla(var(--bulma-danger-h), var(--bulma-danger-s), var(--bulma-danger-l), .5);
+    --bulma-fade-07: hsla(var(--bulma-danger-h), var(--bulma-danger-s), var(--bulma-danger-l), .7);
+  }
+
+  width: 12rem;
+  height: 12rem;
+  display: block;
+  opacity: 0.8;
+  transform: rotate(0);
+  background-image: radial-gradient(
+      circle,
+      hsla(0, 0%, 0%, .1) 20%,
+      var(--bulma-fade-07) 38%,
+      var(--bulma-fade-05) 52%,
+      transparent 69%
+  );
+  z-index: -1;
+  border-radius: 49%;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+
+
+  & > svg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  & > div.progress-pie {
+    width: 5rem;
+    height: 5rem;
+    left: calc(50% - 2.5rem);
+    top: calc(50% - 2.5rem);
+
+    & > svg {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+}
+
+// Animations only for modern hardware
+@supports (view-transition-name: custom-ident) {
+  .button > div.button-circular-info {
+    transition: opacity .2s, width .2s, height .2s, transform .3s;
+  }
+}

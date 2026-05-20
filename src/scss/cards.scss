@@ -1,0 +1,647 @@
+.card {
+  --bulma-card-radius: var(--bulma-radius);
+  --bulma-shadow-l: 0%;
+  --bulma-shadow: 0 0.5em 1em -0.125em hsla(var(--bulma-shadow-h), var(--bulma-shadow-s), var(--bulma-shadow-l), 0.4), 0 0px 0 1px hsla(var(--bulma-shadow-h), var(--bulma-shadow-s), var(--bulma-shadow-l), 0.1);
+
+  &.compact {
+    & > .card-footer:not(.tabs) {
+      height: 0.4rem;
+      margin-top: 0.2rem;
+      border-top: #00000000 1px solid;
+
+      & * {
+        border-radius: initial;
+      }
+      & :first-child {
+        border-bottom-left-radius: var(--bulma-card-radius);
+      }
+      & :last-child {
+        border-bottom-right-radius: var(--bulma-card-radius);
+      }
+
+      & > .card-footer-item {
+        padding: 0;
+        margin: 0;
+
+        &.progress {
+          --bulma-progress-bar-background-color: #00000077;
+          --bulma-progress-background-color: #00000000;
+          background-color: rgba(0,0,0,0.2);
+          background-image: linear-gradient(to right, var(--bulma-progress-value-background-color) 30%, var(--bulma-progress-background-color) 30%);
+          height: auto;
+        }
+      }
+
+      & > .tag {
+        height: 0.34rem;
+        display: inline-block;
+        padding: 0;
+        z-index: 1;
+
+        & > * { // tags > svg-icon
+          padding: 0.3em 0.9em 0;
+          border-radius: 0;
+          width: 3em;
+          position: relative;
+          bottom: 1.2em;
+          background-image: linear-gradient(to bottom, transparent 14%, hsl(var(--bulma-tag-h), var(--bulma-tag-s), calc(var(--bulma-tag-background-l) + var(--bulma-tag-background-l-delta))) 88%);
+        }
+      }
+    }
+    & div.card-header-icon {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      height: auto;
+      flex-shrink: 1;
+      border-top-right-radius: var(--bulma-card-radius);
+      background: var(--bulma-body-background-color);
+
+      & > .button {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        background-image: linear-gradient(to bottom, hsl(var(--bulma-button-h), var(--bulma-button-s), var(--bulma-button-l)), hsl(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-l) / 2)));
+
+        &:first-child {
+          border-top-right-radius: var(--bulma-card-radius);
+        }
+      }
+    }
+    & > .card-header:has(+.card-footer) > div.card-header-icon {
+      margin-bottom: 0.2rem;
+      border-bottom-left-radius: var(--bulma-card-radius);
+      & > .button:last-child {
+        border-bottom-left-radius: var(--bulma-card-radius);
+      }
+    }
+    & > .card-header:not(:has(+.card-footer)) > div.card-header-icon {
+      border-bottom-right-radius: var(--bulma-card-radius);
+      & > .button:last-child {
+        border-bottom-right-radius: var(--bulma-card-radius);
+      }
+    }
+    & > .card-footer.tabs {
+      border-top: #00000000 1px solid;
+      overflow: visible;
+
+      & > ul {
+        & > li {
+          & > a {
+            --bulma-button-h: var(--bulma-link-h);
+            --bulma-button-s: var(--bulma-link-s);
+            --bulma-button-l: var(--bulma-link-dark-l);
+            --bulma-tabs-link-color: var(--bulma-grey);
+
+            border-radius: 0;
+            border-width: 0;
+            padding-bottom: 0.2rem;
+            padding-left: 0;
+            padding-right: 0;
+            background-image: linear-gradient(to bottom, hsl(var(--bulma-button-h), var(--bulma-button-s), var(--bulma-button-l)) 37%, hsl(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-l) / 2)));
+
+            & > span {
+              text-shadow: none;
+              position: absolute;
+              top: -0.8rem;
+              left: 0;
+              right: 0;
+              text-align: center;
+              zoom: 0.55;
+              background-image: linear-gradient(to bottom, transparent 22%, hsl(var(--bulma-button-h), var(--bulma-button-s), var(--bulma-button-l)) 70%);
+            }
+
+            & > span + * {
+              width: 1rem;
+              height: 1rem;
+            }
+
+            &.is-primary {
+              --bulma-button-h: var(--bulma-primary-h);
+              --bulma-button-s: var(--bulma-primary-s);
+              --bulma-button-l: var(--bulma-primary-dark-l);
+            }
+            &.is-info {
+              --bulma-button-h: var(--bulma-info-h);
+              --bulma-button-s: var(--bulma-info-s);
+              --bulma-button-l: var(--bulma-info-dark-l);
+            }
+            &.is-success {
+              --bulma-button-h: var(--bulma-success-h);
+              --bulma-button-s: var(--bulma-success-s);
+              --bulma-button-l: var(--bulma-success-dark-l);
+            }
+            &.is-warning {
+              --bulma-button-h: var(--bulma-warning-h);
+              --bulma-button-s: var(--bulma-warning-s);
+              --bulma-button-l: var(--bulma-warning-dark-l);
+            }
+            &.is-danger {
+              --bulma-button-h: var(--bulma-danger-h);
+              --bulma-button-s: var(--bulma-danger-s);
+              --bulma-button-l: var(--bulma-danger-dark-l);
+            }
+            &.is-link {
+              --bulma-button-h: var(--bulma-link-h);
+              --bulma-button-s: var(--bulma-link-s);
+              --bulma-button-l: var(--bulma-link-dark-l);
+            }
+            &.is-light {
+              --bulma-button-h: var(--bulma-light-h);
+              --bulma-button-s: var(--bulma-light-s);
+              --bulma-button-l: var(--bulma-light-dark-l);
+            }
+          }
+          &:first-child > a {
+            border-bottom-left-radius: var(--bulma-card-radius);
+          }
+
+          &:last-child > a {
+            border-bottom-right-radius: var(--bulma-card-radius);
+          }
+          & > a:hover, & > a:active {
+            & > span {
+              text-shadow: var(--bulma-tabs-toggle-link-active-color) 0 0 0.4rem;
+              background-image: linear-gradient(to bottom, transparent 14%, hsl(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-l) + var(--bulma-active-background-l-delta))) 55%);
+            }
+            background-image: linear-gradient(to bottom, hsl(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-l) + var(--bulma-active-background-l-delta))) 37%, hsl(var(--bulma-button-h), var(--bulma-button-s), calc((var(--bulma-button-l) + var(--bulma-active-background-l-delta)) / 2)));
+          }
+        }
+        & > li.is-active {
+          & > a {
+            &.is-primary {
+              --bulma-button-l: var(--bulma-primary-l);
+            }
+            &.is-info {
+              --bulma-button-l: var(--bulma-info-l);
+            }
+            &.is-success {
+              --bulma-button-l: var(--bulma-success-l);
+            }
+            &.is-warning {
+              --bulma-button-l: var(--bulma-warning-l);
+            }
+            &.is-danger {
+              --bulma-button-l: var(--bulma-danger-l);
+            }
+            &.is-light {
+              --bulma-button-l: var(--bulma-light-l);
+            }
+
+            & > span {
+              text-shadow: var(--bulma-tabs-toggle-link-active-color) 0 0 0.4rem;
+              zoom: 0.8;
+            }
+          }
+        }
+      }
+    }
+    & > .card-header:has(+.card-footer.tabs) {
+      min-height: 3.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &.is-primary.is-outlined {
+    background-color: hsl(var(--bulma-link-h), var(--bulma-link-s), calc(var(--bulma-link-l) / 2), 0.6);
+    border: var(--bulma-primary) solid 1px;
+
+    & > .card-header > .card-header-title {
+      color: var(--bulma-primary);
+    }
+
+    &.hatching {
+      background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 10px,
+          hsla(var(--bulma-primary-h), var(--bulma-primary-s), var(--bulma-primary-l), 29%) 10px,
+          hsla(var(--bulma-primary-h), var(--bulma-primary-s), var(--bulma-primary-l), 12%) 20px
+      ),
+      linear-gradient(
+          to bottom,
+          hsla(var(--bulma-primary-h), var(--bulma-primary-s), var(--bulma-primary-l), 0%),
+          hsla(var(--bulma-primary-h), var(--bulma-primary-s), var(--bulma-primary-l), 15%)
+      ) !important;
+      --bulma-button-border-width: 1px !important;
+    }
+
+    &:hover {
+      box-shadow: 0 0.5em 1em -0.125em hsla(var(--bulma-shadow-h), var(--bulma-shadow-s), var(--bulma-shadow-l), 0.4), 0 0px 0 1px hsla(var(--bulma-primary-h), var(--bulma-primary-s), var(--bulma-primary-l), 0.2), hsla(var(--bulma-primary-h), var(--bulma-primary-s), var(--bulma-primary-l), 50%) 0 0 8px;
+      text-shadow: hsl(var(--bulma-primary-h), var(--bulma-primary-s), var(--bulma-primary-l)) 0 0 9px;
+
+      &.is-outlined::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: inherit;
+        height: 100%;
+        background-image: radial-gradient(circle, hsla(var(--bulma-primary-h), var(--bulma-primary-s), var(--bulma-primary-l), 0%) 50%, hsla(var(--bulma-primary-h), var(--bulma-primary-s), var(--bulma-primary-l), 30%));
+      }
+    }
+    &.active {
+      box-shadow: 0 0.5em 1em -0.125em hsla(var(--bulma-shadow-h), var(--bulma-shadow-s), var(--bulma-shadow-l), 0.4), 0 0px 0 1px hsla(var(--bulma-primary-h), var(--bulma-primary-s), var(--bulma-primary-l), 0.2), hsla(var(--bulma-primary-h), var(--bulma-primary-s), var(--bulma-primary-l), 50%) 0 0 11px 3px;
+      text-shadow: hsl(var(--bulma-primary-h), var(--bulma-primary-s), var(--bulma-primary-l)) 0 0 10px;
+
+      & > .card-header > .card-header-title {
+        color: var(--bulma-primary-light);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: inherit;
+        height: 100%;
+        background-image: radial-gradient(circle, hsla(var(--bulma-primary-h), var(--bulma-primary-s), var(--bulma-primary-l), 0%) 38%, hsla(var(--bulma-primary-h), var(--bulma-primary-s), var(--bulma-primary-l), 30%));
+      }
+    }
+  }
+
+  &.is-info.is-outlined {
+    background-color: hsl(var(--bulma-link-h), var(--bulma-link-s), calc(var(--bulma-link-l) / 2), 0.6);
+    border: var(--bulma-info) solid 1px;
+
+    & > .card-header > .card-header-title {
+      color: var(--bulma-info);
+    }
+
+    &.hatching {
+      background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 10px,
+          hsla(var(--bulma-info-h), var(--bulma-info-s), var(--bulma-info-l), 29%) 10px,
+          hsla(var(--bulma-info-h), var(--bulma-info-s), var(--bulma-info-l), 12%) 20px
+      ),
+      linear-gradient(
+          to bottom,
+          hsla(var(--bulma-info-h), var(--bulma-info-s), var(--bulma-info-l), 0%),
+          hsla(var(--bulma-info-h), var(--bulma-info-s), var(--bulma-info-l), 15%)
+      ) !important;
+      --bulma-button-border-width: 1px !important;
+    }
+
+    &:hover {
+      box-shadow: 0 0.5em 1em -0.125em hsla(var(--bulma-shadow-h), var(--bulma-shadow-s), var(--bulma-shadow-l), 0.4), 0 0px 0 1px hsla(var(--bulma-info-h), var(--bulma-info-s), var(--bulma-info-l), 0.2), hsla(var(--bulma-info-h), var(--bulma-info-s), var(--bulma-info-l), 50%) 0 0 8px;
+      text-shadow: hsl(var(--bulma-info-h), var(--bulma-info-s), var(--bulma-info-l)) 0 0 9px;
+
+      &.is-outlined::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: inherit;
+        height: 100%;
+        background-image: radial-gradient(circle, hsla(var(--bulma-info-h), var(--bulma-info-s), var(--bulma-info-l), 0%) 50%, hsla(var(--bulma-info-h), var(--bulma-info-s), var(--bulma-info-l), 30%));
+      }
+    }
+    &.active {
+      box-shadow: 0 0.5em 1em -0.125em hsla(var(--bulma-shadow-h), var(--bulma-shadow-s), var(--bulma-shadow-l), 0.4), 0 0px 0 1px hsla(var(--bulma-info-h), var(--bulma-info-s), var(--bulma-info-l), 0.2), hsla(var(--bulma-info-h), var(--bulma-info-s), var(--bulma-info-l), 50%) 0 0 11px 3px;
+      text-shadow: hsl(var(--bulma-info-h), var(--bulma-info-s), var(--bulma-info-l)) 0 0 10px;
+
+      & > .card-header > .card-header-title {
+        color: var(--bulma-info-light);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: inherit;
+        height: 100%;
+        background-image: radial-gradient(circle, hsla(var(--bulma-info-h), var(--bulma-info-s), var(--bulma-info-l), 0%) 38%, hsla(var(--bulma-info-h), var(--bulma-info-s), var(--bulma-info-l), 30%));
+      }
+    }
+  }
+
+  &.is-success.is-outlined {
+    background-color: hsl(var(--bulma-link-h), var(--bulma-link-s), calc(var(--bulma-link-l) / 2), 0.6);
+    border: var(--bulma-success) solid 1px;
+
+    & > .card-header > .card-header-title {
+      color: var(--bulma-success);
+    }
+
+    &.hatching {
+      background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 10px,
+          hsla(var(--bulma-success-h), var(--bulma-success-s), var(--bulma-success-l), 29%) 10px,
+          hsla(var(--bulma-success-h), var(--bulma-success-s), var(--bulma-success-l), 12%) 20px
+      ),
+      linear-gradient(
+          to bottom,
+          hsla(var(--bulma-success-h), var(--bulma-success-s), var(--bulma-success-l), 0%),
+          hsla(var(--bulma-success-h), var(--bulma-success-s), var(--bulma-success-l), 15%)
+      ) !important;
+      --bulma-button-border-width: 1px !important;
+    }
+
+    &:hover {
+      box-shadow: 0 0.5em 1em -0.125em hsla(var(--bulma-shadow-h), var(--bulma-shadow-s), var(--bulma-shadow-l), 0.4), 0 0px 0 1px hsla(var(--bulma-success-h), var(--bulma-success-s), var(--bulma-success-l), 0.2), hsla(var(--bulma-success-h), var(--bulma-success-s), var(--bulma-success-l), 50%) 0 0 8px;
+      text-shadow: hsl(var(--bulma-success-h), var(--bulma-success-s), var(--bulma-success-l)) 0 0 9px;
+
+      &.is-outlined::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: inherit;
+        height: 100%;
+        background-image: radial-gradient(circle, hsla(var(--bulma-success-h), var(--bulma-success-s), var(--bulma-success-l), 0%) 50%, hsla(var(--bulma-success-h), var(--bulma-success-s), var(--bulma-success-l), 30%));
+      }
+    }
+    &.active {
+      box-shadow: 0 0.5em 1em -0.125em hsla(var(--bulma-shadow-h), var(--bulma-shadow-s), var(--bulma-shadow-l), 0.4), 0 0px 0 1px hsla(var(--bulma-success-h), var(--bulma-success-s), var(--bulma-success-l), 0.2), hsla(var(--bulma-success-h), var(--bulma-success-s), var(--bulma-success-l), 50%) 0 0 11px 3px;
+      text-shadow: hsl(var(--bulma-success-h), var(--bulma-success-s), var(--bulma-success-l)) 0 0 10px;
+
+      & > .card-header > .card-header-title {
+        color: var(--bulma-success-light);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: inherit;
+        height: 100%;
+        background-image: radial-gradient(circle, hsla(var(--bulma-success-h), var(--bulma-success-s), var(--bulma-success-l), 0%) 38%, hsla(var(--bulma-success-h), var(--bulma-success-s), var(--bulma-success-l), 30%));
+      }
+    }
+  }
+
+  &.is-warning.is-outlined {
+    background-color: hsl(var(--bulma-link-h), var(--bulma-link-s), calc(var(--bulma-link-l) / 2), 0.6);
+    border: var(--bulma-warning) solid 1px;
+
+    & > .card-header > .card-header-title {
+      color: var(--bulma-warning);
+    }
+
+    &.hatching {
+      background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 10px,
+          hsla(var(--bulma-warning-h), var(--bulma-warning-s), var(--bulma-warning-l), 29%) 10px,
+          hsla(var(--bulma-warning-h), var(--bulma-warning-s), var(--bulma-warning-l), 12%) 20px
+      ),
+      linear-gradient(
+          to bottom,
+          hsla(var(--bulma-warning-h), var(--bulma-warning-s), var(--bulma-warning-l), 0%),
+          hsla(var(--bulma-warning-h), var(--bulma-warning-s), var(--bulma-warning-l), 15%)
+      ) !important;
+      --bulma-button-border-width: 1px !important;
+    }
+
+    &:hover {
+      box-shadow: 0 0.5em 1em -0.125em hsla(var(--bulma-shadow-h), var(--bulma-shadow-s), var(--bulma-shadow-l), 0.4), 0 0px 0 1px hsla(var(--bulma-warning-h), var(--bulma-warning-s), var(--bulma-warning-l), 0.2), hsla(var(--bulma-warning-h), var(--bulma-warning-s), var(--bulma-warning-l), 50%) 0 0 8px;
+      text-shadow: hsl(var(--bulma-warning-h), var(--bulma-warning-s), var(--bulma-warning-l)) 0 0 9px;
+
+      &.is-outlined::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: inherit;
+        height: 100%;
+        background-image: radial-gradient(circle, hsla(var(--bulma-warning-h), var(--bulma-warning-s), var(--bulma-warning-l), 0%) 50%, hsla(var(--bulma-warning-h), var(--bulma-warning-s), var(--bulma-warning-l), 30%));
+      }
+    }
+    &.active {
+      box-shadow: 0 0.5em 1em -0.125em hsla(var(--bulma-shadow-h), var(--bulma-shadow-s), var(--bulma-shadow-l), 0.4), 0 0px 0 1px hsla(var(--bulma-warning-h), var(--bulma-warning-s), var(--bulma-warning-l), 0.2), hsla(var(--bulma-warning-h), var(--bulma-warning-s), var(--bulma-warning-l), 50%) 0 0 11px 3px;
+      text-shadow: hsl(var(--bulma-warning-h), var(--bulma-warning-s), var(--bulma-warning-l)) 0 0 10px;
+
+      & > .card-header > .card-header-title {
+        color: var(--bulma-warning-light);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: inherit;
+        height: 100%;
+        background-image: radial-gradient(circle, hsla(var(--bulma-warning-h), var(--bulma-warning-s), var(--bulma-warning-l), 0%) 38%, hsla(var(--bulma-warning-h), var(--bulma-warning-s), var(--bulma-warning-l), 30%));
+      }
+    }
+  }
+
+  &.is-danger.is-outlined {
+    background-color: hsl(var(--bulma-link-h), var(--bulma-link-s), calc(var(--bulma-link-l) / 2), 0.6);
+    border: var(--bulma-danger) solid 1px;
+
+    & > .card-header > .card-header-title {
+      color: var(--bulma-danger);
+    }
+
+    &.hatching {
+      background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 10px,
+          hsla(var(--bulma-danger-h), var(--bulma-danger-s), var(--bulma-danger-l), 29%) 10px,
+          hsla(var(--bulma-danger-h), var(--bulma-danger-s), var(--bulma-danger-l), 12%) 20px
+      ),
+      linear-gradient(
+          to bottom,
+          hsla(var(--bulma-danger-h), var(--bulma-danger-s), var(--bulma-danger-l), 0%),
+          hsla(var(--bulma-danger-h), var(--bulma-danger-s), var(--bulma-danger-l), 15%)
+      ) !important;
+      --bulma-button-border-width: 1px !important;
+    }
+
+    &:hover {
+      box-shadow: 0 0.5em 1em -0.125em hsla(var(--bulma-shadow-h), var(--bulma-shadow-s), var(--bulma-shadow-l), 0.4), 0 0px 0 1px hsla(var(--bulma-danger-h), var(--bulma-danger-s), var(--bulma-danger-l), 0.2), hsla(var(--bulma-danger-h), var(--bulma-danger-s), var(--bulma-danger-l), 50%) 0 0 8px;
+      text-shadow: hsl(var(--bulma-danger-h), var(--bulma-danger-s), var(--bulma-danger-l)) 0 0 9px;
+
+      &.is-outlined::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: inherit;
+        height: 100%;
+        background-image: radial-gradient(circle, hsla(var(--bulma-danger-h), var(--bulma-danger-s), var(--bulma-danger-l), 0%) 50%, hsla(var(--bulma-danger-h), var(--bulma-danger-s), var(--bulma-danger-l), 30%));
+      }
+    }
+    &.active {
+      box-shadow: 0 0.5em 1em -0.125em hsla(var(--bulma-shadow-h), var(--bulma-shadow-s), var(--bulma-shadow-l), 0.4), 0 0px 0 1px hsla(var(--bulma-danger-h), var(--bulma-danger-s), var(--bulma-danger-l), 0.2), hsla(var(--bulma-danger-h), var(--bulma-danger-s), var(--bulma-danger-l), 50%) 0 0 11px 3px;
+      text-shadow: hsl(var(--bulma-danger-h), var(--bulma-danger-s), var(--bulma-danger-l)) 0 0 10px;
+
+      & > .card-header > .card-header-title {
+        color: var(--bulma-danger-light);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: inherit;
+        height: 100%;
+        background-image: radial-gradient(circle, hsla(var(--bulma-danger-h), var(--bulma-danger-s), var(--bulma-danger-l), 0%) 38%, hsla(var(--bulma-danger-h), var(--bulma-danger-s), var(--bulma-danger-l), 30%));
+      }
+    }
+  }
+
+  &.is-link.is-outlined {
+    background-color: hsl(var(--bulma-link-h), var(--bulma-link-s), calc(var(--bulma-link-l) / 2), 0.6);
+    border: var(--bulma-link) solid 1px;
+
+    & > .card-header > .card-header-title {
+      color: var(--bulma-link);
+    }
+
+    &.hatching {
+      background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 10px,
+          hsla(var(--bulma-link-h), var(--bulma-link-s), var(--bulma-link-l), 29%) 10px,
+          hsla(var(--bulma-link-h), var(--bulma-link-s), var(--bulma-link-l), 12%) 20px
+      ),
+      linear-gradient(
+          to bottom,
+          hsla(var(--bulma-link-h), var(--bulma-link-s), var(--bulma-link-l), 0%),
+          hsla(var(--bulma-link-h), var(--bulma-link-s), var(--bulma-link-l), 15%)
+      ) !important;
+      --bulma-button-border-width: 1px !important;
+    }
+
+    &:hover {
+      box-shadow: 0 0.5em 1em -0.125em hsla(var(--bulma-shadow-h), var(--bulma-shadow-s), var(--bulma-shadow-l), 0.4), 0 0px 0 1px hsla(var(--bulma-link-h), var(--bulma-link-s), var(--bulma-link-l), 0.2), hsla(var(--bulma-link-h), var(--bulma-link-s), var(--bulma-link-l), 50%) 0 0 8px;
+      text-shadow: hsl(var(--bulma-link-h), var(--bulma-link-s), var(--bulma-link-l)) 0 0 9px;
+
+      &.is-outlined::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: inherit;
+        height: 100%;
+        background-image: radial-gradient(circle, hsla(var(--bulma-link-h), var(--bulma-link-s), var(--bulma-link-l), 0%) 50%, hsla(var(--bulma-link-h), var(--bulma-link-s), var(--bulma-link-l), 30%));
+      }
+    }
+    &.active {
+      box-shadow: 0 0.5em 1em -0.125em hsla(var(--bulma-shadow-h), var(--bulma-shadow-s), var(--bulma-shadow-l), 0.4), 0 0px 0 1px hsla(var(--bulma-link-h), var(--bulma-link-s), var(--bulma-link-l), 0.2), hsla(var(--bulma-link-h), var(--bulma-link-s), var(--bulma-link-l), 50%) 0 0 11px 3px;
+      text-shadow: hsl(var(--bulma-link-h), var(--bulma-link-s), var(--bulma-link-l)) 0 0 10px;
+
+      & > .card-header > .card-header-title {
+        color: var(--bulma-link-light);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: inherit;
+        height: 100%;
+        background-image: radial-gradient(circle, hsla(var(--bulma-link-h), var(--bulma-link-s), var(--bulma-link-l), 0%) 38%, hsla(var(--bulma-link-h), var(--bulma-link-s), var(--bulma-link-l), 30%));
+      }
+    }
+  }
+
+  &.is-light.is-outlined {
+    background-color: hsl(var(--bulma-light-h), var(--bulma-light-s), calc(var(--bulma-light-l) / 2), 0.6);
+    border: var(--bulma-link) solid 1px;
+
+    & > .card-header > .card-header-title {
+      color: var(--bulma-light);
+    }
+
+    &.hatching {
+      background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 10px,
+          hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 29%) 10px,
+          hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 12%) 20px
+      ),
+      linear-gradient(
+          to bottom,
+          hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 0%),
+          hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 15%)
+      ) !important;
+      --bulma-button-border-width: 1px !important;
+    }
+
+    &:hover {
+      box-shadow: 0 0.5em 1em -0.125em hsla(var(--bulma-shadow-h), var(--bulma-shadow-s), var(--bulma-shadow-l), 0.4), 0 0px 0 1px hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 0.2), hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 50%) 0 0 8px;
+      text-shadow: hsl(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l)) 0 0 9px;
+
+      &.is-outlined::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: inherit;
+        height: 100%;
+        background-image: radial-gradient(circle, hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 0%) 50%, hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 30%));
+      }
+    }
+    &.active {
+      box-shadow: 0 0.5em 1em -0.125em hsla(var(--bulma-shadow-h), var(--bulma-shadow-s), var(--bulma-shadow-l), 0.4), 0 0px 0 1px hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 0.2), hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 50%) 0 0 11px 3px;
+      text-shadow: hsl(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l)) 0 0 10px;
+
+      & > .card-header > .card-header-title {
+        color: var(--bulma-light-light);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: inherit;
+        height: 100%;
+        background-image: radial-gradient(circle, hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 0%) 38%, hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 30%));
+      }
+    }
+  }
+}
+
+.grid > .card {
+  height: fit-content;
+
+  &:not(:last-child) {
+    margin-bottom: 0;
+  }
+}

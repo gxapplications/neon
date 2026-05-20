@@ -1,0 +1,193 @@
+.button.active:has(div.button-circular-menu):not(:has(.gyrophare)) /*, .button:active:has(div.button-circular-menu)*/ {
+  z-index: 3;
+}
+.button > div.button-circular-menu {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: anchor-center;
+  transform: rotate(-90deg);
+  text-shadow: black 0 0 1px, black 0 0 2px, black 0 0 4px, black 0 0 6px;
+  z-index: 1;
+
+  & > .submenu {
+    list-style: none;
+    visibility: hidden;
+    display: block;
+    z-index: 98;
+
+    & > li {
+      font-size: medium;
+      --item: 1;
+      position: absolute;
+      width: 240px;
+      height: 40px;
+      transform: translateY(-20px) rotate(calc(-130deg + 25deg * var(--item))) translateX(-70px);
+      transform-origin: left center;
+      display: flex;
+      align-items: center;
+      text-align: right;
+      opacity: 0;
+
+      &:nth-child(2) {
+        --item: 2;
+      }
+      &:nth-child(3) {
+        --item: 3;
+      }
+      &:nth-child(4) {
+        --item: 4;
+      }
+      &:nth-child(5) {
+        --item: 5;
+      }
+      &:nth-child(6) {
+        --item: 6;
+      }
+      &:nth-child(7) {
+        --item: 7;
+      }
+      &:nth-child(8) {
+        --item: 8;
+      }
+      &:nth-child(9) {
+        --item: 9;
+      }
+
+      & > a, & > div {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        & > svg {
+          width: 1.4rem;
+          height: 1.4rem;
+          padding: 3px;
+          margin-left: 8px;
+          rotate: calc(130deg - 40deg * var(--item));
+          &.button {
+            border-radius: 50%;
+          }
+        }
+        & > span {
+          font-size: x-small;
+          transform: translateX(-60px);
+
+          &.button {
+            padding: 3px 12px;
+            border-radius: 24px;
+          }
+
+          &::before {
+            border-radius: 24px;
+          }
+
+          &.is-reversed {
+            rotate: 180deg;
+          }
+        }
+      }
+    }
+  }
+}
+.button.active > div.button-circular-menu /*, .button:active > div.button-circular-menu*/ {
+  --bulma-colored: hsl(var(--bulma-button-h), var(--bulma-button-s), var(--bulma-button-l));
+  --bulma-colored-transparent: hsla(var(--bulma-button-h), var(--bulma-button-s), var(--bulma-button-l), .55);
+  --bulma-fade-05: hsla(var(--bulma-black-h), var(--bulma-black-s), calc(var(--bulma-black-l) / 4), .55);
+  --bulma-fade-07: hsla(var(--bulma-black-h), var(--bulma-black-s), calc(var(--bulma-black-l) / 4), .78);
+  --bulma-fade-09: hsla(var(--bulma-black-h), var(--bulma-black-s), calc(var(--bulma-black-l) / 4), .99);
+
+  width: 38rem;
+  height: 38rem;
+  opacity: 1;
+  transform: rotate(0);
+  border-radius: 49%;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  z-index: -1;
+  background-image: radial-gradient(
+      circle,
+      var(--bulma-colored) 4%,
+      var(--bulma-colored-transparent) 4.5%,
+      hsla(0, 0%, 0%, .1) 6%,
+      var(--bulma-fade-09) 11%,
+      var(--bulma-fade-07) 47%,
+      var(--bulma-fade-05) 60%,
+      transparent 70%
+  );
+
+  & > .submenu {
+    visibility: visible;
+
+    & > li {
+      transform: translateY(-20px) rotate(calc(-130deg + 40deg * var(--item))) translateX(30px);
+      opacity: 1;
+
+      & > a, & > div {
+        & > svg.button.is-outlined:hover, & > svg.button.is-outlined:active {
+          padding: 1px;
+          background-image: radial-gradient(circle, hsla(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta)), 0%) 0%, hsla(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta)), 30%));
+        }
+        & > span {
+          transform: translateX(7px);
+          &.button.is-outlined:hover, &.button.is-outlined:active {
+            padding: 3px 11px;
+          }
+          &.is-reversed {
+            transform: translateX(-7px);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Circular menu above a gyrophare
+.button.active > .gyrophare + div.button-circular-menu {
+  z-index: 1;
+  background-image: initial;
+
+  & > .submenu {
+    & > li {
+      font-size: large;
+
+      & > a, & > div {
+        & > svg {
+          width: 2.2rem;
+          height: 2.2rem;
+          padding: 4px;
+          margin-left: 10px;
+          &:hover {
+            padding: 3px !important;
+          }
+        }
+        & > span {
+          font-size: large;
+        }
+      }
+    }
+  }
+}
+
+// Animations only for modern hardware
+@supports (view-transition-name: custom-ident) {
+  .button > div.button-circular-menu {
+    transition: opacity .5s, width .4s, height .4s, transform .5s;
+
+    & > .submenu {
+      transition: visibility 0.7s;
+
+      & > li {
+        transition: opacity .4s calc(.03s * var(--item)), transform .5s calc(.02s * var(--item));
+
+        & > a > span, & > div > span {
+          transition: transform .5s calc(.02s + .02s * var(--item));
+        }
+      }
+    }
+  }
+}
+

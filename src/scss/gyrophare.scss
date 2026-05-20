@@ -1,0 +1,65 @@
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(360deg);
+    opacity: 0.4;
+  }
+  to {
+    transform: rotate(720deg);
+    opacity: 1;
+  }
+}
+.gyrophare::before {
+  --plain-light: rgba(240, 20, 20, 0.9);
+  --semi-light: rgba(120, 0, 0, 0.7);
+  --low-light: rgba(60, 0, 0, 0.2);
+  content: '';
+  position: absolute;
+  z-index: -9;
+  width: 70rem;
+  height: 70rem;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle,
+      transparent 7%,
+      #030510 60%
+    ),
+    conic-gradient(from 0,
+      var(--plain-light),
+      var(--plain-light) 8%,
+      var(--semi-light) 12%,
+      var(--low-light) 20%,
+      var(--low-light) 30%,
+      var(--semi-light) 38%,
+      var(--plain-light) 42%,
+      var(--plain-light) 58%,
+      var(--semi-light) 62%,
+      var(--low-light) 70%,
+      var(--low-light) 80%,
+      var(--semi-light) 88%,
+      var(--plain-light) 92%
+    ) border-box;
+  opacity: 0.9;
+  animation: rotating 3s linear infinite;
+}
+.gyrophare::after {
+  --plain-light: rgba(240, 20, 20, 0.7);
+  --semi-light: rgba(120, 0, 0, 0.5);
+
+  content: '';
+  position: absolute;
+  z-index: -8;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle,
+      #030510 39%,
+      var(--plain-light) 41%,
+      var(--semi-light) 44%,
+      transparent 63%
+    );
+}

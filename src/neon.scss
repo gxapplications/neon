@@ -1,0 +1,104 @@
+$blue: #1d8cf8;
+$pink: #fd5da7;
+$default: #344675;
+$red: #f5365c;
+$orange: #fb8340;
+$green: #2dce89;
+$yellow: #ffee22;
+
+@use "bulma/sass/utilities" with (
+  $family-primary: '"Poppins", sans-serif',
+  $primary: $pink,
+  $info: $blue,
+  $link: $default,
+  $danger: $red,
+  $warning: $orange,
+  $success: $green,
+  $light: $yellow,
+  $widescreen-enabled: true,
+  $fullhd-enabled: false,
+);
+@use "bulma/sass/form" with (
+  $input-shadow: none
+);
+
+@forward "bulma/sass/base";
+@forward "bulma/sass/base/skeleton";
+@forward "bulma/sass/layout/container";
+@forward "bulma/sass/grid";
+@forward "bulma/sass/elements/button";
+@forward "bulma/sass/elements/tag";
+@forward "bulma/sass/elements/progress";
+@forward "bulma/sass/components/card";
+@forward "bulma/sass/components/tabs";
+@forward "bulma/sass/helpers/flexbox";
+@forward "bulma/sass/helpers/typography";
+@forward "bulma/sass/helpers/color";
+@forward "bulma/sass/helpers/spacing";
+@forward "bulma/sass/helpers/other";
+
+// Import the themes so that all CSS variables have a value
+@forward "bulma/sass/themes";
+
+@forward "scss/buttons";
+@forward "scss/button-circular-info";
+@forward "scss/button-circular-menu";
+@forward "scss/cards";
+@forward "scss/progress-pie";
+@forward "scss/gyrophare";
+@forward "scss/grids";
+
+// Import the Google Font
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800");
+
+// Animations cancelled for old hardware
+:root {
+  --bulma-scheme-main-l: 10%;
+  --bulma-duration: 0s;
+}
+html {
+  height: 100%;
+  background-color: #101830;
+  background-attachment: fixed;
+}
+body {
+  display: block;
+  font-family: Poppins, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(34, 42, 66, 0);
+}
+#app {
+  position: relative;
+  overflow: clip;
+  padding: 2rem 1rem 6rem;
+  background-attachment: fixed;
+}
+
+// Animations only for modern hardware
+@supports (view-transition-name: custom-ident) {
+  :root {
+    --bulma-duration: 600ms;
+  }
+  html {
+    background-color: #030510;
+  }
+  #app {
+    background-color: transparent;
+    background-image:
+      linear-gradient(0deg, transparent 9%,
+        rgba(128, 128, 255, .15) 10%, rgba(128, 128, 255, .15) 12%, transparent 13%, transparent 29%,
+        rgba(128, 128, 255, .05) 30%, rgba(128, 128, 255, .05) 31%, transparent 32%, transparent 49%,
+        rgba(128, 128, 255, .05) 50%, rgba(128, 128, 255, .05) 51%, transparent 52%, transparent 69%,
+        rgba(128, 128, 255, .05) 70%, rgba(128, 128, 255, .05) 71%, transparent 72%, transparent 89%,
+        rgba(128, 128, 255, .05) 90%, rgba(128, 128, 255, .05) 91%, transparent 92%, transparent),
+      linear-gradient(90deg, transparent 9%,
+        rgba(128, 128, 255, .15) 10%, rgba(128, 128, 255, .15) 12%, transparent 13%, transparent 29%,
+        rgba(255, 128, 255, .05) 30%, rgba(128, 128, 255, .05) 31%, transparent 32%, transparent 49%,
+        rgba(128, 128, 255, .05) 50%, rgba(128, 128, 255, .05) 51%, transparent 52%, transparent 69%,
+        rgba(128, 128, 255, .05) 70%, rgba(128, 128, 255, .05) 71%, transparent 72%, transparent 89%,
+        rgba(128, 128, 255, .05) 90%, rgba(128, 128, 255, .05) 91%, transparent 92%, transparent);
+
+    height:100%;
+    background-size:50px 50px;
+  }
+}

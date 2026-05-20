@@ -1,7 +1,7 @@
 {
   "name": "@gxapplications/neon",
   "version": "0.0.1",
-  "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "build-bulma": "sass --load-path=node_modules src/neon.scss dist/neon.css",

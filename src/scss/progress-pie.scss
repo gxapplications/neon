@@ -1,0 +1,75 @@
+.progress-pie {
+  --bulma-progress-background-color: var(--bulma-link-light);
+
+  &.is-primary {
+    --bulma-progress-background-color: var(--bulma-primary);
+  }
+  &.is-info {
+    --bulma-progress-background-color: var(--bulma-info);
+  }
+  &.is-success {
+    --bulma-progress-background-color: var(--bulma-success);
+  }
+  &.is-warning {
+    --bulma-progress-background-color: var(--bulma-warning);
+  }
+  &.is-danger {
+    --bulma-progress-background-color: var(--bulma-danger);
+  }
+
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bulma-scheme-main);
+  background-image: linear-gradient(to right, transparent 50%, var(--bulma-progress-background-color) 0);
+  box-shadow: 0 0 4px 0 var(--bulma-progress-background-color);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  & > svg {
+    position: absolute;
+    top: 1px;
+    bottom: 0;
+    z-index: 1;
+    align-self: center;
+    zoom: 0.92;
+  }
+}
+
+.progress-pie::before {
+  content: '';
+  display: block;
+  margin-left: 50%;
+  height: 100%;
+  border-radius: 0 100% 100% 0 / 50%;
+  background-color: inherit;
+  transform-origin: left;
+}
+
+.progress-pie::after {
+  content: ''; //attr(data-value);
+  position: absolute;
+  width: calc(100% - 0.25rem);
+  height: calc(100% - 0.25rem);
+  margin: auto;
+  border-radius: 50%;
+  background-image: radial-gradient(circle, var(--bulma-scheme-main) 45%, transparent 90%);
+  left: 0;
+  right: 0;
+  top: 1px;
+  bottom: 0;
+}
+
+@for $i from 0 through 50 {
+  .progress-pie[data-value="#{$i}"]:before {
+    transform: rotate(#{calc($i / 100)}turn);
+  }
+}
+
+@for $i from 51 through 100 {
+  .progress-pie[data-value="#{$i}"]:before {
+    background-color: var(--bulma-progress-background-color);
+    transform: rotate(#{calc($i / 100 - .5)}turn);
+  }
+}
