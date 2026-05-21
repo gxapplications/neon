@@ -6,7 +6,7 @@
   "scripts": {
     "build-bulma": "sass --load-path=node_modules src/neon.scss dist/neon.css",
     "build-bulma-full": "sass --load-path=node_modules src/neon-full.scss dist/neon-full.css",
-    "build": "npm run build-bulma && npm run build-bulma-full",
+    "build": "npm run build-bulma && npm run build-bulma-full && cp dist/neon-full.css docs/assets/neon-full.css",
     "start": "npm run build-bulma -- --watch"
   },
   "dependencies": {
