@@ -98,7 +98,7 @@
             </div>
             <div class="cell is-col-span-3 card compact is-warning is-outlined hatching active">
               <header class="card-header">
-                <p class="card-header-title is-centered is-size-7-mobile is-size-6">Activating...</p>
+                <p class="card-header-title is-centered is-size-7-mobile is-size-6">Activating</p>
                 <div class="card-header-icon">
                   <a class="button is-info hatching">
                     <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M8.27,3L3,8.27V15.73L8.27,21H15.73C17.5,19.24 21,15.73 21,15.73V8.27L15.73,3M9.1,5H14.9L19,9.1V14.9L14.9,19H9.1L5,14.9V9.1M9.12,7.71L7.71,9.12L10.59,12L7.71,14.88L9.12,16.29L12,13.41L14.88,16.29L16.29,14.88L13.41,12L16.29,9.12L14.88,7.71L12,10.59" style="fill: currentcolor;"></path></svg>
@@ -173,7 +173,418 @@
             </div>
           </div>
 
+          <h3 class="subtitle">Keeper states</h3>
+          <div class="grid">
+            <div class="cell is-col-span-3 card compact is-info is-outlined hatching">
+              <header class="card-header">
+                <p class="card-header-title is-centered is-size-7-mobile is-size-6">Keeper OFF</p>
+                <div class="card-header-icon">
+                  <a class="button is-success">
+                    <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 11C21 16.55 17.16 21.74 12 23C6.84 21.74 3 16.55 3 11V5L12 1L21 5V11M12 21C15.75 20 19 15.54 19 11.22V6.3L12 3.18L5 6.3V11.22C5 15.54 8.25 20 12 21M12 8.89C13.6 8.89 14.89 10.18 14.89 11.78S13.6 14.67 12 14.67 9.11 13.37 9.11 11.78 10.41 8.89 12 8.89M12 6L13.38 8C12.96 7.82 12.5 7.73 12 7.73S11.05 7.82 10.62 8L12 6M7 8.89L9.4 8.69C9.06 9 8.74 9.34 8.5 9.76C8.25 10.18 8.1 10.62 8 11.08L7 8.89M7 14.67L8.03 12.5C8.11 12.93 8.27 13.38 8.5 13.8C8.75 14.23 9.06 14.59 9.4 14.88L7 14.67M17 8.89L16 11.08C15.9 10.62 15.74 10.18 15.5 9.76C15.26 9.34 14.95 9 14.6 8.68L17 8.89M17 14.67L14.6 14.87C14.94 14.58 15.25 14.22 15.5 13.8C15.74 13.38 15.89 12.93 15.97 12.5L17 14.67M12 17.55L10.61 15.57C11.04 15.72 11.5 15.82 12 15.82C12.5 15.82 12.95 15.72 13.37 15.57L12 17.55Z" style="fill: currentcolor;"></path></svg>
+                  </a>
+                  <a class="button is-primary hatching">
+                    <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 11C21 16.55 17.16 21.74 12 23C6.84 21.74 3 16.55 3 11V5L12 1L21 5V11M12 21C15.75 20 19 15.54 19 11.22V6.3L12 3.18L5 6.3V11.22C5 15.54 8.25 20 12 21M9 14.33C10.76 16.5 14.13 16.57 15.97 14.4C16.2 14.13 16.05 13.72 15.71 13.66C14.42 13.45 13.23 12.68 12.53 11.46C11.82 10.24 11.75 8.83 12.21 7.6C12.33 7.27 12.05 6.94 11.7 7C8.36 7.62 6.81 11.61 9 14.33" style="fill: currentcolor;"></path></svg>
+                  </a>
+                </div>
+              </header>
+              <footer class="card-footer">
+                <div class="tag is-info">
+                  <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M1,4.27L3,6.27V11C3,16.55 6.84,21.74 12,23C13.87,22.54 15.57,21.56 16.97,20.24L19.23,22.5L20.5,21.22L2.28,3L1,4.27M12,21C8.25,20 5,15.54 5,11.22V8.27L15.59,18.86C14.53,19.89 13.3,20.65 12,21M21,5V11C21,13.28 20.35,15.5 19.23,17.4L17.77,15.95C18.54,14.5 19,12.84 19,11.22V6.3L12,3.18L7.16,5.34L5.65,3.82L12,1L21,5Z" style="fill: currentcolor;"></path></svg>
+                </div>
+                <div class="tag">
+                  <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 11C21 16.55 17.16 21.74 12 23C6.84 21.74 3 16.55 3 11V5L12 1L21 5V11M12 21C15.75 20 19 15.54 19 11.22V6.3L12 3.18L5 6.3V11.22C5 15.54 8.25 20 12 21M12 8.89C13.6 8.89 14.89 10.18 14.89 11.78S13.6 14.67 12 14.67 9.11 13.37 9.11 11.78 10.41 8.89 12 8.89M12 6L13.38 8C12.96 7.82 12.5 7.73 12 7.73S11.05 7.82 10.62 8L12 6M7 8.89L9.4 8.69C9.06 9 8.74 9.34 8.5 9.76C8.25 10.18 8.1 10.62 8 11.08L7 8.89M7 14.67L8.03 12.5C8.11 12.93 8.27 13.38 8.5 13.8C8.75 14.23 9.06 14.59 9.4 14.88L7 14.67M17 8.89L16 11.08C15.9 10.62 15.74 10.18 15.5 9.76C15.26 9.34 14.95 9 14.6 8.68L17 8.89M17 14.67L14.6 14.87C14.94 14.58 15.25 14.22 15.5 13.8C15.74 13.38 15.89 12.93 15.97 12.5L17 14.67M12 17.55L10.61 15.57C11.04 15.72 11.5 15.82 12 15.82C12.5 15.82 12.95 15.72 13.37 15.57L12 17.55Z" style="fill: currentcolor;"></path></svg>
+                </div>
+                <div class="tag">
+                  <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 11C21 16.55 17.16 21.74 12 23C6.84 21.74 3 16.55 3 11V5L12 1L21 5V11M12 21C15.75 20 19 15.54 19 11.22V6.3L12 3.18L5 6.3V11.22C5 15.54 8.25 20 12 21M9 14.33C10.76 16.5 14.13 16.57 15.97 14.4C16.2 14.13 16.05 13.72 15.71 13.66C14.42 13.45 13.23 12.68 12.53 11.46C11.82 10.24 11.75 8.83 12.21 7.6C12.33 7.27 12.05 6.94 11.7 7C8.36 7.62 6.81 11.61 9 14.33" style="fill: currentcolor;"></path></svg>
+                </div>
+                <div class="tag">
+                  <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M10,21H14A2,2 0 0,1 12,23A2,2 0 0,1 10,21M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M17,11A5,5 0 0,0 12,6A5,5 0 0,0 7,11V18H17V11M19.75,3.19L18.33,4.61C20.04,6.3 21,8.6 21,11H23C23,8.07 21.84,5.25 19.75,3.19M1,11H3C3,8.6 3.96,6.3 5.67,4.61L4.25,3.19C2.16,5.25 1,8.07 1,11Z" style="fill: currentcolor;"></path></svg>
+                </div>
+                <div class="card-footer-item" />
+              </footer>
+            </div>
+            <div class="cell is-col-span-3 card compact is-success is-outlined hatching">
+              <header class="card-header">
+                <p class="card-header-title is-centered is-size-7-mobile is-size-6">Keeper <svg-icon type="mdi" :path="mdiShieldSunOutline"></svg-icon></p>
+                <div class="card-header-icon">
+                  <a class="button is-info">
+                    <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M1,4.27L3,6.27V11C3,16.55 6.84,21.74 12,23C13.87,22.54 15.57,21.56 16.97,20.24L19.23,22.5L20.5,21.22L2.28,3L1,4.27M12,21C8.25,20 5,15.54 5,11.22V8.27L15.59,18.86C14.53,19.89 13.3,20.65 12,21M21,5V11C21,13.28 20.35,15.5 19.23,17.4L17.77,15.95C18.54,14.5 19,12.84 19,11.22V6.3L12,3.18L7.16,5.34L5.65,3.82L12,1L21,5Z" style="fill: currentcolor;"></path></svg>
+                  </a>
+                  <a class="button is-primary hatching">
+                    <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 11C21 16.55 17.16 21.74 12 23C6.84 21.74 3 16.55 3 11V5L12 1L21 5V11M12 21C15.75 20 19 15.54 19 11.22V6.3L12 3.18L5 6.3V11.22C5 15.54 8.25 20 12 21M9 14.33C10.76 16.5 14.13 16.57 15.97 14.4C16.2 14.13 16.05 13.72 15.71 13.66C14.42 13.45 13.23 12.68 12.53 11.46C11.82 10.24 11.75 8.83 12.21 7.6C12.33 7.27 12.05 6.94 11.7 7C8.36 7.62 6.81 11.61 9 14.33" style="fill: currentcolor;"></path></svg>
+                  </a>
+                </div>
+              </header>
+              <footer class="card-footer">
+                <div class="tag">
+                  <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M1,4.27L3,6.27V11C3,16.55 6.84,21.74 12,23C13.87,22.54 15.57,21.56 16.97,20.24L19.23,22.5L20.5,21.22L2.28,3L1,4.27M12,21C8.25,20 5,15.54 5,11.22V8.27L15.59,18.86C14.53,19.89 13.3,20.65 12,21M21,5V11C21,13.28 20.35,15.5 19.23,17.4L17.77,15.95C18.54,14.5 19,12.84 19,11.22V6.3L12,3.18L7.16,5.34L5.65,3.82L12,1L21,5Z" style="fill: currentcolor;"></path></svg>
+                </div>
+                <div class="tag is-success">
+                  <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 11C21 16.55 17.16 21.74 12 23C6.84 21.74 3 16.55 3 11V5L12 1L21 5V11M12 21C15.75 20 19 15.54 19 11.22V6.3L12 3.18L5 6.3V11.22C5 15.54 8.25 20 12 21M12 8.89C13.6 8.89 14.89 10.18 14.89 11.78S13.6 14.67 12 14.67 9.11 13.37 9.11 11.78 10.41 8.89 12 8.89M12 6L13.38 8C12.96 7.82 12.5 7.73 12 7.73S11.05 7.82 10.62 8L12 6M7 8.89L9.4 8.69C9.06 9 8.74 9.34 8.5 9.76C8.25 10.18 8.1 10.62 8 11.08L7 8.89M7 14.67L8.03 12.5C8.11 12.93 8.27 13.38 8.5 13.8C8.75 14.23 9.06 14.59 9.4 14.88L7 14.67M17 8.89L16 11.08C15.9 10.62 15.74 10.18 15.5 9.76C15.26 9.34 14.95 9 14.6 8.68L17 8.89M17 14.67L14.6 14.87C14.94 14.58 15.25 14.22 15.5 13.8C15.74 13.38 15.89 12.93 15.97 12.5L17 14.67M12 17.55L10.61 15.57C11.04 15.72 11.5 15.82 12 15.82C12.5 15.82 12.95 15.72 13.37 15.57L12 17.55Z" style="fill: currentcolor;"></path></svg>
+                </div>
+                <div class="tag">
+                  <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 11C21 16.55 17.16 21.74 12 23C6.84 21.74 3 16.55 3 11V5L12 1L21 5V11M12 21C15.75 20 19 15.54 19 11.22V6.3L12 3.18L5 6.3V11.22C5 15.54 8.25 20 12 21M9 14.33C10.76 16.5 14.13 16.57 15.97 14.4C16.2 14.13 16.05 13.72 15.71 13.66C14.42 13.45 13.23 12.68 12.53 11.46C11.82 10.24 11.75 8.83 12.21 7.6C12.33 7.27 12.05 6.94 11.7 7C8.36 7.62 6.81 11.61 9 14.33" style="fill: currentcolor;"></path></svg>
+                </div>
+                <div class="tag">
+                  <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M10,21H14A2,2 0 0,1 12,23A2,2 0 0,1 10,21M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M17,11A5,5 0 0,0 12,6A5,5 0 0,0 7,11V18H17V11M19.75,3.19L18.33,4.61C20.04,6.3 21,8.6 21,11H23C23,8.07 21.84,5.25 19.75,3.19M1,11H3C3,8.6 3.96,6.3 5.67,4.61L4.25,3.19C2.16,5.25 1,8.07 1,11Z" style="fill: currentcolor;"></path></svg>
+                </div>
+                <div class="card-footer-item" />
+              </footer>
+            </div>
+            <div class="cell is-col-span-3 card compact is-primary is-outlined hatching">
+              <header class="card-header">
+                <p class="card-header-title is-centered is-size-7-mobile is-size-6">Keeper <svg-icon type="mdi" :path="mdiShieldMoonOutline"></svg-icon></p>
+                <div class="card-header-icon">
+                  <a class="button is-info">
+                    <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M1,4.27L3,6.27V11C3,16.55 6.84,21.74 12,23C13.87,22.54 15.57,21.56 16.97,20.24L19.23,22.5L20.5,21.22L2.28,3L1,4.27M12,21C8.25,20 5,15.54 5,11.22V8.27L15.59,18.86C14.53,19.89 13.3,20.65 12,21M21,5V11C21,13.28 20.35,15.5 19.23,17.4L17.77,15.95C18.54,14.5 19,12.84 19,11.22V6.3L12,3.18L7.16,5.34L5.65,3.82L12,1L21,5Z" style="fill: currentcolor;"></path></svg>
+                  </a>
+                  <a class="button is-success">
+                    <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 11C21 16.55 17.16 21.74 12 23C6.84 21.74 3 16.55 3 11V5L12 1L21 5V11M12 21C15.75 20 19 15.54 19 11.22V6.3L12 3.18L5 6.3V11.22C5 15.54 8.25 20 12 21M12 8.89C13.6 8.89 14.89 10.18 14.89 11.78S13.6 14.67 12 14.67 9.11 13.37 9.11 11.78 10.41 8.89 12 8.89M12 6L13.38 8C12.96 7.82 12.5 7.73 12 7.73S11.05 7.82 10.62 8L12 6M7 8.89L9.4 8.69C9.06 9 8.74 9.34 8.5 9.76C8.25 10.18 8.1 10.62 8 11.08L7 8.89M7 14.67L8.03 12.5C8.11 12.93 8.27 13.38 8.5 13.8C8.75 14.23 9.06 14.59 9.4 14.88L7 14.67M17 8.89L16 11.08C15.9 10.62 15.74 10.18 15.5 9.76C15.26 9.34 14.95 9 14.6 8.68L17 8.89M17 14.67L14.6 14.87C14.94 14.58 15.25 14.22 15.5 13.8C15.74 13.38 15.89 12.93 15.97 12.5L17 14.67M12 17.55L10.61 15.57C11.04 15.72 11.5 15.82 12 15.82C12.5 15.82 12.95 15.72 13.37 15.57L12 17.55Z" style="fill: currentcolor;"></path></svg>
+                  </a>
+                </div>
+              </header>
+              <footer class="card-footer">
+                <div class="tag">
+                  <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M1,4.27L3,6.27V11C3,16.55 6.84,21.74 12,23C13.87,22.54 15.57,21.56 16.97,20.24L19.23,22.5L20.5,21.22L2.28,3L1,4.27M12,21C8.25,20 5,15.54 5,11.22V8.27L15.59,18.86C14.53,19.89 13.3,20.65 12,21M21,5V11C21,13.28 20.35,15.5 19.23,17.4L17.77,15.95C18.54,14.5 19,12.84 19,11.22V6.3L12,3.18L7.16,5.34L5.65,3.82L12,1L21,5Z" style="fill: currentcolor;"></path></svg>
+                </div>
+                <div class="tag">
+                  <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 11C21 16.55 17.16 21.74 12 23C6.84 21.74 3 16.55 3 11V5L12 1L21 5V11M12 21C15.75 20 19 15.54 19 11.22V6.3L12 3.18L5 6.3V11.22C5 15.54 8.25 20 12 21M12 8.89C13.6 8.89 14.89 10.18 14.89 11.78S13.6 14.67 12 14.67 9.11 13.37 9.11 11.78 10.41 8.89 12 8.89M12 6L13.38 8C12.96 7.82 12.5 7.73 12 7.73S11.05 7.82 10.62 8L12 6M7 8.89L9.4 8.69C9.06 9 8.74 9.34 8.5 9.76C8.25 10.18 8.1 10.62 8 11.08L7 8.89M7 14.67L8.03 12.5C8.11 12.93 8.27 13.38 8.5 13.8C8.75 14.23 9.06 14.59 9.4 14.88L7 14.67M17 8.89L16 11.08C15.9 10.62 15.74 10.18 15.5 9.76C15.26 9.34 14.95 9 14.6 8.68L17 8.89M17 14.67L14.6 14.87C14.94 14.58 15.25 14.22 15.5 13.8C15.74 13.38 15.89 12.93 15.97 12.5L17 14.67M12 17.55L10.61 15.57C11.04 15.72 11.5 15.82 12 15.82C12.5 15.82 12.95 15.72 13.37 15.57L12 17.55Z" style="fill: currentcolor;"></path></svg>
+                </div>
+                <div class="tag is-primary">
+                  <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 11C21 16.55 17.16 21.74 12 23C6.84 21.74 3 16.55 3 11V5L12 1L21 5V11M12 21C15.75 20 19 15.54 19 11.22V6.3L12 3.18L5 6.3V11.22C5 15.54 8.25 20 12 21M9 14.33C10.76 16.5 14.13 16.57 15.97 14.4C16.2 14.13 16.05 13.72 15.71 13.66C14.42 13.45 13.23 12.68 12.53 11.46C11.82 10.24 11.75 8.83 12.21 7.6C12.33 7.27 12.05 6.94 11.7 7C8.36 7.62 6.81 11.61 9 14.33" style="fill: currentcolor;"></path></svg>
+                </div>
+                <div class="tag">
+                  <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M10,21H14A2,2 0 0,1 12,23A2,2 0 0,1 10,21M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M17,11A5,5 0 0,0 12,6A5,5 0 0,0 7,11V18H17V11M19.75,3.19L18.33,4.61C20.04,6.3 21,8.6 21,11H23C23,8.07 21.84,5.25 19.75,3.19M1,11H3C3,8.6 3.96,6.3 5.67,4.61L4.25,3.19C2.16,5.25 1,8.07 1,11Z" style="fill: currentcolor;"></path></svg>
+                </div>
+                <div class="card-footer-item" />
+              </footer>
+            </div>
+            <div class="cell is-col-span-3 card compact is-danger is-outlined hatching active">
+              <header class="card-header">
+                <p class="card-header-title is-centered is-size-7-mobile is-size-6">ALERT !</p>
+                <div class="card-header-icon">
+                  <a class="button is-info">
+                    <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M1,4.27L3,6.27V11C3,16.55 6.84,21.74 12,23C13.87,22.54 15.57,21.56 16.97,20.24L19.23,22.5L20.5,21.22L2.28,3L1,4.27M12,21C8.25,20 5,15.54 5,11.22V8.27L15.59,18.86C14.53,19.89 13.3,20.65 12,21M21,5V11C21,13.28 20.35,15.5 19.23,17.4L17.77,15.95C18.54,14.5 19,12.84 19,11.22V6.3L12,3.18L7.16,5.34L5.65,3.82L12,1L21,5Z" style="fill: currentcolor;"></path></svg>
+                  </a>
+                  <a class="button is-success">
+                    <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 11C21 16.55 17.16 21.74 12 23C6.84 21.74 3 16.55 3 11V5L12 1L21 5V11M12 21C15.75 20 19 15.54 19 11.22V6.3L12 3.18L5 6.3V11.22C5 15.54 8.25 20 12 21M12 8.89C13.6 8.89 14.89 10.18 14.89 11.78S13.6 14.67 12 14.67 9.11 13.37 9.11 11.78 10.41 8.89 12 8.89M12 6L13.38 8C12.96 7.82 12.5 7.73 12 7.73S11.05 7.82 10.62 8L12 6M7 8.89L9.4 8.69C9.06 9 8.74 9.34 8.5 9.76C8.25 10.18 8.1 10.62 8 11.08L7 8.89M7 14.67L8.03 12.5C8.11 12.93 8.27 13.38 8.5 13.8C8.75 14.23 9.06 14.59 9.4 14.88L7 14.67M17 8.89L16 11.08C15.9 10.62 15.74 10.18 15.5 9.76C15.26 9.34 14.95 9 14.6 8.68L17 8.89M17 14.67L14.6 14.87C14.94 14.58 15.25 14.22 15.5 13.8C15.74 13.38 15.89 12.93 15.97 12.5L17 14.67M12 17.55L10.61 15.57C11.04 15.72 11.5 15.82 12 15.82C12.5 15.82 12.95 15.72 13.37 15.57L12 17.55Z" style="fill: currentcolor;"></path></svg>
+                  </a>
+                </div>
+              </header>
+              <footer class="card-footer">
+                <div class="tag">
+                  <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M1,4.27L3,6.27V11C3,16.55 6.84,21.74 12,23C13.87,22.54 15.57,21.56 16.97,20.24L19.23,22.5L20.5,21.22L2.28,3L1,4.27M12,21C8.25,20 5,15.54 5,11.22V8.27L15.59,18.86C14.53,19.89 13.3,20.65 12,21M21,5V11C21,13.28 20.35,15.5 19.23,17.4L17.77,15.95C18.54,14.5 19,12.84 19,11.22V6.3L12,3.18L7.16,5.34L5.65,3.82L12,1L21,5Z" style="fill: currentcolor;"></path></svg>
+                </div>
+                <div class="tag">
+                  <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 11C21 16.55 17.16 21.74 12 23C6.84 21.74 3 16.55 3 11V5L12 1L21 5V11M12 21C15.75 20 19 15.54 19 11.22V6.3L12 3.18L5 6.3V11.22C5 15.54 8.25 20 12 21M12 8.89C13.6 8.89 14.89 10.18 14.89 11.78S13.6 14.67 12 14.67 9.11 13.37 9.11 11.78 10.41 8.89 12 8.89M12 6L13.38 8C12.96 7.82 12.5 7.73 12 7.73S11.05 7.82 10.62 8L12 6M7 8.89L9.4 8.69C9.06 9 8.74 9.34 8.5 9.76C8.25 10.18 8.1 10.62 8 11.08L7 8.89M7 14.67L8.03 12.5C8.11 12.93 8.27 13.38 8.5 13.8C8.75 14.23 9.06 14.59 9.4 14.88L7 14.67M17 8.89L16 11.08C15.9 10.62 15.74 10.18 15.5 9.76C15.26 9.34 14.95 9 14.6 8.68L17 8.89M17 14.67L14.6 14.87C14.94 14.58 15.25 14.22 15.5 13.8C15.74 13.38 15.89 12.93 15.97 12.5L17 14.67M12 17.55L10.61 15.57C11.04 15.72 11.5 15.82 12 15.82C12.5 15.82 12.95 15.72 13.37 15.57L12 17.55Z" style="fill: currentcolor;"></path></svg>
+                </div>
+                <div class="tag">
+                  <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 11C21 16.55 17.16 21.74 12 23C6.84 21.74 3 16.55 3 11V5L12 1L21 5V11M12 21C15.75 20 19 15.54 19 11.22V6.3L12 3.18L5 6.3V11.22C5 15.54 8.25 20 12 21M9 14.33C10.76 16.5 14.13 16.57 15.97 14.4C16.2 14.13 16.05 13.72 15.71 13.66C14.42 13.45 13.23 12.68 12.53 11.46C11.82 10.24 11.75 8.83 12.21 7.6C12.33 7.27 12.05 6.94 11.7 7C8.36 7.62 6.81 11.61 9 14.33" style="fill: currentcolor;"></path></svg>
+                </div>
+                <div class="tag is-danger">
+                  <svg class="vue3-icon" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M10,21H14A2,2 0 0,1 12,23A2,2 0 0,1 10,21M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M17,11A5,5 0 0,0 12,6A5,5 0 0,0 7,11V18H17V11M19.75,3.19L18.33,4.61C20.04,6.3 21,8.6 21,11H23C23,8.07 21.84,5.25 19.75,3.19M1,11H3C3,8.6 3.96,6.3 5.67,4.61L4.25,3.19C2.16,5.25 1,8.07 1,11Z" style="fill: currentcolor;"></path></svg>
+                </div>
+                <div class="card-footer-item" />
+              </footer>
+            </div>
+          </div>
 
+          <h3 class="subtitle">Status cards</h3>
+          <div class="grid">
+            <a class="cell button compact is-flex is-flex-direction-column is-link is-outlined">
+              <svg class="vue3-icon" width="16" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 20V2H3V20H1V23H23V20M19 4V11H13V4M5 4H11V11H5M5 20V13H11V20M13 20V13H19V20Z" style="fill: currentcolor;"></path></svg>
+              <svg class="vue3-icon has-text-white" width="12" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M16 20H8V6H16M16.67 4H15V2H9V4H7.33C6.6 4 6 4.6 6 5.33V20.67C6 21.4 6.6 22 7.33 22H16.67C17.41 22 18 21.41 18 20.67V5.33C18 4.6 17.4 4 16.67 4M15 16H9V19H15V16M15 7H9V10H15V7M15 11.5H9V14.5H15V11.5Z" style="fill: currentcolor;"></path></svg>
+            </a>
+            <a class="cell button compact is-flex is-flex-direction-column is-primary is-outlined">
+              <svg class="vue3-icon" width="16" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 20V2H3V20H1V23H23V20M19 4V11H13V4M5 4H11V11H5M5 20V13H11V20M13 20V13H19V20Z" style="fill: currentcolor;"></path></svg>
+              <svg class="vue3-icon has-text-white" width="12" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M16 20H8V6H16M16.67 4H15V2H9V4H7.33C6.6 4 6 4.6 6 5.33V20.67C6 21.4 6.6 22 7.33 22H16.67C17.41 22 18 21.41 18 20.67V5.33C18 4.6 17.4 4 16.67 4M15 16H9V19H15V16M15 11.5H9V14.5H15V11.5Z" style="fill: currentcolor;"></path></svg>
+            </a>
+            <a class="cell button compact is-flex is-flex-direction-column is-info is-outlined">
+              <svg class="vue3-icon" width="16" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 20V2H3V20H1V23H23V20M19 4V11H13V4M5 4H11V11H5M5 20V13H11V20M13 20V13H19V20Z" style="fill: currentcolor;"></path></svg>
+              <svg class="vue3-icon has-text-white" width="12" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M16 20H8V6H16M16.67 4H15V2H9V4H7.33C6.6 4 6 4.6 6 5.33V20.67C6 21.4 6.6 22 7.33 22H16.67C17.41 22 18 21.41 18 20.67V5.33C18 4.6 17.4 4 16.67 4M15 16H9V19H15V16" style="fill: currentcolor;"></path></svg>
+            </a>
+            <a class="cell button compact is-flex is-flex-direction-column is-success is-outlined">
+              <svg class="vue3-icon" width="16" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 20V2H3V20H1V23H23V20M19 4V11H13V4M5 4H11V11H5M5 20V13H11V20M13 20V13H19V20Z" style="fill: currentcolor;"></path></svg>
+              <svg class="vue3-icon has-text-light" width="12" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M16 20H8V6H16M16.67 4H15V2H9V4H7.33C6.6 4 6 4.6 6 5.33V20.67C6 21.4 6.6 22 7.33 22H16.67C17.41 22 18 21.41 18 20.67V5.33C18 4.6 17.4 4 16.67 4M15 16H9V19H15V16" style="fill: currentcolor;"></path></svg>
+            </a>
+            <a class="cell button compact is-flex is-flex-direction-column is-warning is-outlined">
+              <svg class="vue3-icon" width="16" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 20V2H3V20H1V23H23V20M19 4V11H13V4M5 4H11V11H5M5 20V13H11V20M13 20V13H19V20Z" style="fill: currentcolor;"></path></svg>
+              <svg class="vue3-icon has-text-warning" width="12" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M16,20H8V6H16M16.67,4H15V2H9V4H7.33A1.33,1.33 0 0,0 6,5.33V20.67C6,21.4 6.6,22 7.33,22H16.67A1.33,1.33 0 0,0 18,20.67V5.33C18,4.6 17.4,4 16.67,4Z" style="fill: currentcolor;"></path></svg>
+            </a>
+            <a class="cell button compact is-flex is-flex-direction-column is-warning is-outlined active">
+              <svg class="vue3-icon" width="16" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 20V2H3V20H1V23H23V20M19 4V11H13V4M5 4H11V11H5M5 20V13H11V20M13 20V13H19V20Z" style="fill: currentcolor;"></path></svg>
+              <svg class="vue3-icon has-text-warning" width="12" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M16,20H8V6H16M16.67,4H15V2H9V4H7.33A1.33,1.33 0 0,0 6,5.33V20.67C6,21.4 6.6,22 7.33,22H16.67A1.33,1.33 0 0,0 18,20.67V5.33C18,4.6 17.4,4 16.67,4Z" style="fill: currentcolor;"></path></svg>
+            </a>
+            <a class="cell button compact is-flex is-flex-direction-column is-danger is-outlined">
+              <svg class="vue3-icon" width="16" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 20V2H3V20H1V23H23V20M19 4V11H13V4M5 4H11V11H5M5 20V13H11V20M13 20V13H19V20Z" style="fill: currentcolor;"></path></svg>
+              <svg class="vue3-icon has-text-danger" width="12" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M18 17.35L3.38 2.73L2.11 4L6 7.89V20.67A1.34 1.34 0 0 0 7.33 22H16.67A1.34 1.34 0 0 0 18 20.67V19.89L20.84 22.73L22.11 21.46M16 20H8V9.89L16 17.89M16 6V12.8L18 14.8V5.33A1.34 1.34 0 0 0 16.67 4H15V2H9V4H7.21L9.21 6Z" style="fill: currentcolor;"></path></svg>
+            </a>
+            <a class="cell button compact is-flex is-flex-direction-column is-danger is-outlined active">
+              <svg class="vue3-icon" width="16" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 20V2H3V20H1V23H23V20M19 4V11H13V4M5 4H11V11H5M5 20V13H11V20M13 20V13H19V20Z" style="fill: currentcolor;"></path></svg>
+              <svg class="vue3-icon has-text-danger" width="12" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M18 17.35L3.38 2.73L2.11 4L6 7.89V20.67A1.34 1.34 0 0 0 7.33 22H16.67A1.34 1.34 0 0 0 18 20.67V19.89L20.84 22.73L22.11 21.46M16 20H8V9.89L16 17.89M16 6V12.8L18 14.8V5.33A1.34 1.34 0 0 0 16.67 4H15V2H9V4H7.21L9.21 6Z" style="fill: currentcolor;"></path></svg>
+            </a>
+            <a class="cell button compact is-flex is-flex-direction-column is-danger is-outlined hatching active">
+              <svg class="vue3-icon" width="16" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 20V2H3V20H1V23H23V20M19 4V11H13V4M5 4H11V11H5M5 20V13H11V20M13 20V13H19V20Z" style="fill: currentcolor;"></path></svg>
+              <svg class="vue3-icon has-text-danger" width="12" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M18 17.35L3.38 2.73L2.11 4L6 7.89V20.67A1.34 1.34 0 0 0 7.33 22H16.67A1.34 1.34 0 0 0 18 20.67V19.89L20.84 22.73L22.11 21.46M16 20H8V9.89L16 17.89M16 6V12.8L18 14.8V5.33A1.34 1.34 0 0 0 16.67 4H15V2H9V4H7.21L9.21 6Z" style="fill: currentcolor;"></path></svg>
+            </a>
+            <div class="cell"></div>
+            <a class="cell button compact is-flex is-flex-direction-column is-outlined">
+              <svg class="vue3-icon" width="16" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 20V2H3V20H1V23H23V20M19 4V11H13V4M5 4H11V11H5M5 20V13H11V20M13 20V13H19V20Z" style="fill: currentcolor;"></path></svg>
+              <svg class="vue3-icon has-text-primary" width="12" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M15.07,12.25L14.17,13.17C13.63,13.71 13.25,14.18 13.09,15H11.05C11.16,14.1 11.56,13.28 12.17,12.67L13.41,11.41C13.78,11.05 14,10.55 14,10C14,8.89 13.1,8 12,8A2,2 0 0,0 10,10H8A4,4 0 0,1 12,6A4,4 0 0,1 16,10C16,10.88 15.64,11.68 15.07,12.25M13,19H11V17H13M16.67,4H15V2H9V4H7.33A1.33,1.33 0 0,0 6,5.33V20.66C6,21.4 6.6,22 7.33,22H16.67C17.4,22 18,21.4 18,20.66V5.33C18,4.59 17.4,4 16.67,4Z" style="fill: currentcolor;"></path></svg>
+            </a>
+            <a class="cell button compact is-flex is-flex-direction-column is-link is-skeleton is-outlined">
+              <svg class="vue3-icon" width="16" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 20V2H3V20H1V23H23V20M19 4V11H13V4M5 4H11V11H5M5 20V13H11V20M13 20V13H19V20Z" style="fill: currentcolor;"></path></svg>
+              <svg class="vue3-icon has-text-primary" width="12" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M15.07,12.25L14.17,13.17C13.63,13.71 13.25,14.18 13.09,15H11.05C11.16,14.1 11.56,13.28 12.17,12.67L13.41,11.41C13.78,11.05 14,10.55 14,10C14,8.89 13.1,8 12,8A2,2 0 0,0 10,10H8A4,4 0 0,1 12,6A4,4 0 0,1 16,10C16,10.88 15.64,11.68 15.07,12.25M13,19H11V17H13M16.67,4H15V2H9V4H7.33A1.33,1.33 0 0,0 6,5.33V20.66C6,21.4 6.6,22 7.33,22H16.67C17.4,22 18,21.4 18,20.66V5.33C18,4.59 17.4,4 16.67,4Z" style="fill: currentcolor;"></path></svg>
+            </a>
+          </div>
+          <div class="grid">
+            <a class="cell button compact is-flex is-flex-direction-column is-info is-outlined">
+              <svg class="vue3-icon" width="16" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 20V2H3V20H1V23H23V20M19 4V11H13V4M5 4H11V11H5M5 20V13H11V20M13 20V13H19V20Z" style="fill: currentcolor;"></path></svg>
+              <div class="button-circular-info is-info">
+                <svg viewBox="0 0 512 512">
+                  <path id="circlebottom" stroke="transparent" fill="none" d="M56,256a200,200 0 1,0 400,0a200,200 0 1,0 -400,0" />
+                  <path id="circletop" stroke="transparent" fill="none" d="M86,256a170,170 0 1,1 340,0" />
+                  <path id="circleverytop" stroke="transparent" fill="none" d="M31,256a225,225 0 1,1 450,0" />
+                  <g style="font-size:2.1em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-info-light);" dy="20">
+                      <textPath xlink:href="#circlebottom" startOffset="36%">
+                        Fenêtre Sdb parentale
+                      </textPath>
+                    </text>
+                  </g>
+                  <g style="font-size:2em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-info-dark-invert);" dy="20">
+                      <textPath xlink:href="#circletop" startOffset="66%">
+                        il y a 1j 2h 35m
+                      </textPath>
+                    </text>
+                  </g>
+                  <g style="font-size:2.5em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-info-light);" dy="20">
+                      <textPath xlink:href="#circleverytop" startOffset="67%">
+                        Ouvert - Batt. 98%
+                      </textPath>
+                    </text>
+                  </g>
+                </svg>
+              </div>
+            </a>
+            <div class="cell"></div>
+            <a class="cell button compact is-flex is-flex-direction-column is-primary is-outlined">
+              <svg class="vue3-icon" width="16" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 20V2H3V20H1V23H23V20M19 4V11H13V4M5 4H11V11H5M5 20V13H11V20M13 20V13H19V20Z" style="fill: currentcolor;"></path></svg>
+              <div class="button-circular-info is-primary">
+                <svg viewBox="0 0 512 512">
+                  <path id="circlebottom" stroke="transparent" fill="none" d="M56,256a200,200 0 1,0 400,0a200,200 0 1,0 -400,0" />
+                  <path id="circletop" stroke="transparent" fill="none" d="M86,256a170,170 0 1,1 340,0" />
+                  <path id="circleverytop" stroke="transparent" fill="none" d="M31,256a225,225 0 1,1 450,0" />
+                  <g style="font-size:3em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-primary-light);" dy="20">
+                      <textPath xlink:href="#circlebottom" startOffset="25%">
+                        Fenêtre Sdb parentale
+                      </textPath>
+                    </text>
+                  </g>
+                  <g style="font-size:2.5em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-primary-dark-invert);" dy="20">
+                      <textPath xlink:href="#circletop" startOffset="50%">
+                        il y a 1j 2h 35m
+                      </textPath>
+                    </text>
+                  </g>
+                  <g style="font-size:3em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-success-light);" dy="20">
+                      <textPath xlink:href="#circleverytop" startOffset="50%">
+                        Ouvert - Batt. 67%
+                      </textPath>
+                    </text>
+                  </g>
+                </svg>
+              </div>
+            </a>
+            <a class="cell button compact is-flex is-flex-direction-column is-success is-outlined">
+              <svg class="vue3-icon" width="16" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 20V2H3V20H1V23H23V20M19 4V11H13V4M5 4H11V11H5M5 20V13H11V20M13 20V13H19V20Z" style="fill: currentcolor;"></path></svg>
+              <div class="button-circular-info is-success">
+                <svg viewBox="0 0 512 512">
+                  <path id="circlebottom" stroke="transparent" fill="none" d="M56,256a200,200 0 1,0 400,0a200,200 0 1,0 -400,0" />
+                  <path id="circletop" stroke="transparent" fill="none" d="M86,256a170,170 0 1,1 340,0" />
+                  <path id="circleverytop" stroke="transparent" fill="none" d="M31,256a225,225 0 1,1 450,0" />
+                  <g style="font-size:3em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-success-light);" dy="20">
+                      <textPath xlink:href="#circlebottom" startOffset="25%">
+                        Fenêtre Sdb parentale
+                      </textPath>
+                    </text>
+                  </g>
+                  <g style="font-size:2.5em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-success-dark-invert);" dy="20">
+                      <textPath xlink:href="#circletop" startOffset="50%">
+                        il y a 1j 2h 35m
+                      </textPath>
+                    </text>
+                  </g>
+                  <g style="font-size:3em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-success-light);" dy="20">
+                      <textPath xlink:href="#circleverytop" startOffset="50%">
+                        Ouvert - Batt. 67%
+                      </textPath>
+                    </text>
+                  </g>
+                </svg>
+              </div>
+            </a>
+            <a class="cell button compact is-flex is-flex-direction-column is-warning is-outlined">
+              <svg class="vue3-icon" width="16" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 20V2H3V20H1V23H23V20M19 4V11H13V4M5 4H11V11H5M5 20V13H11V20M13 20V13H19V20Z" style="fill: currentcolor;"></path></svg>
+              <div class="button-circular-info is-warning">
+                <svg viewBox="0 0 512 512">
+                  <path id="circlebottom" stroke="transparent" fill="none" d="M56,256a200,200 0 1,0 400,0a200,200 0 1,0 -400,0" />
+                  <path id="circletop" stroke="transparent" fill="none" d="M86,256a170,170 0 1,1 340,0" />
+                  <path id="circleverytop" stroke="transparent" fill="none" d="M31,256a225,225 0 1,1 450,0" />
+                  <g style="font-size:3em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-warning-light);" dy="20">
+                      <textPath xlink:href="#circlebottom" startOffset="25%">
+                        Fenêtre Sdb parentale
+                      </textPath>
+                    </text>
+                  </g>
+                  <g style="font-size:2.5em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-warning-dark-invert);" dy="20">
+                      <textPath xlink:href="#circletop" startOffset="50%">
+                        il y a 1j 2h 35m
+                      </textPath>
+                    </text>
+                  </g>
+                  <g style="font-size:3em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-success-light);" dy="20">
+                      <textPath xlink:href="#circleverytop" startOffset="50%">
+                        Ouvert - Batt. 67%
+                      </textPath>
+                    </text>
+                  </g>
+                </svg>
+              </div>
+            </a>
+            <a class="cell button compact is-flex is-flex-direction-column is-danger is-outlined">
+              <svg class="vue3-icon" width="16" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 20V2H3V20H1V23H23V20M19 4V11H13V4M5 4H11V11H5M5 20V13H11V20M13 20V13H19V20Z" style="fill: currentcolor;"></path></svg>
+              Title
+              <div class="button-circular-info is-danger">
+                <svg viewBox="0 0 512 512">
+                  <path id="circlebottom" stroke="transparent" fill="none" d="M56,256a200,200 0 1,0 400,0a200,200 0 1,0 -400,0" />
+                  <path id="circleaction" stroke="transparent" fill="none" d="M106,256a150,150 0 1,0 300,0" />
+                  <path id="circletop" stroke="transparent" fill="none" d="M86,256a170,170 0 1,1 340,0" />
+                  <path id="circleverytop" stroke="transparent" fill="none" d="M31,256a225,225 0 1,1 450,0" />
+                  <g style="font-size:3em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-danger-light);" dy="20">
+                      <textPath xlink:href="#circlebottom" startOffset="25%">
+                        Fenêtre Sdb parentale
+                      </textPath>
+                    </text>
+                  </g>
+                  <g style="font-size:2em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-white);" dy="0">
+                      <textPath xlink:href="#circleaction" startOffset="50%">
+                        Maintenir pour rafraîchir
+                      </textPath>
+                    </text>
+                  </g>
+                  <g style="font-size:2.5em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-danger-light);" dy="20">
+                      <textPath xlink:href="#circletop" startOffset="50%">
+                        il y a 1j 2h 35m
+                      </textPath>
+                    </text>
+                  </g>
+                  <g style="font-size:3em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-white);" dy="20">
+                      <textPath xlink:href="#circleverytop" startOffset="50%">
+                        Ouvert - Batt. 67%
+                      </textPath>
+                    </text>
+                  </g>
+                </svg>
+                <div class="progress-pie is-danger" data-value="66">
+                  <svg-icon type="mdi" :path="mdiRefreshCircle" width="32" height="32"></svg-icon>
+                </div>
+              </div>
+            </a>
+            <div class="cell"></div>
+            <div class="cell"></div>
+
+            <a class="cell button compact is-flex is-flex-direction-column is-success is-outlined">
+              <svg class="vue3-icon" width="16" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 20V2H3V20H1V23H23V20M19 4V11H13V4M5 4H11V11H5M5 20V13H11V20M13 20V13H19V20Z" style="fill: currentcolor;"></path></svg>
+              <div class="button-circular-info is-success">
+                <svg viewBox="0 0 512 512">
+                  <path id="circlebottom" stroke="transparent" fill="none" d="M56,256a200,200 0 1,0 400,0a200,200 0 1,0 -400,0" />
+                  <path id="circletop" stroke="transparent" fill="none" d="M86,256a170,170 0 1,1 340,0" />
+                  <path id="circleverytop" stroke="transparent" fill="none" d="M31,256a225,225 0 1,1 450,0" />
+                  <g style="font-size:3em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-success-light);" dy="20">
+                      <textPath xlink:href="#circlebottom" startOffset="25%">
+                        Fenêtre Sdb parentale
+                      </textPath>
+                    </text>
+                  </g>
+                  <g style="font-size:2.5em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-success-dark-invert);" dy="20">
+                      <textPath xlink:href="#circletop" startOffset="50%">
+                        il y a 1j 2h 35m
+                      </textPath>
+                    </text>
+                  </g>
+                  <g style="font-size:3em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-success-light);" dy="20">
+                      <textPath xlink:href="#circleverytop" startOffset="50%">
+                        Ouvert - Batt. 67%
+                      </textPath>
+                    </text>
+                  </g>
+                </svg>
+              </div>
+            </a>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <a class="cell button compact is-flex is-flex-direction-column is-warning is-outlined">
+              <svg class="vue3-icon" width="16" height="24" viewBox="0 0 24 24" style="transform: rotate(var(--r, 0deg)) scale(var(--sx, 1), var(--sy, 1)); --sx: 1; --sy: 1; --r: 0deg;"><path d="M21 20V2H3V20H1V23H23V20M19 4V11H13V4M5 4H11V11H5M5 20V13H11V20M13 20V13H19V20Z" style="fill: currentcolor;"></path></svg>
+              <div class="button-circular-info is-warning">
+                <svg viewBox="0 0 512 512">
+                  <path id="circlebottom" stroke="transparent" fill="none" d="M56,256a200,200 0 1,0 400,0a200,200 0 1,0 -400,0" />
+                  <path id="circleaction" stroke="transparent" fill="none" d="M106,256a150,150 0 1,0 300,0" />
+                  <path id="circletop" stroke="transparent" fill="none" d="M86,256a170,170 0 1,1 340,0" />
+                  <path id="circleverytop" stroke="transparent" fill="none" d="M31,256a225,225 0 1,1 450,0" />
+                  <g style="font-size:2.1em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-warning-light);" dy="20">
+                      <textPath xlink:href="#circlebottom" startOffset="15%">
+                        Fenêtre Sdb parentale
+                      </textPath>
+                    </text>
+                  </g>
+                  <g style="font-size:2em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-white);" dy="0">
+                      <textPath xlink:href="#circleaction" startOffset="39%">
+                        Maintenir pour rafraîchir
+                      </textPath>
+                    </text>
+                  </g>
+                  <g style="font-size:2em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-warning-dark-invert);" dy="20">
+                      <textPath xlink:href="#circletop" startOffset="33%">
+                        il y a 1j 2h 35m
+                      </textPath>
+                    </text>
+                  </g>
+                  <g style="font-size:2.5em;" text-anchor="middle">
+                    <text style="fill:var(--bulma-warning-light);" dy="20">
+                      <textPath xlink:href="#circleverytop" startOffset="32%">
+                        Ouvert - Batt. 67%
+                      </textPath>
+                    </text>
+                  </g>
+                </svg>
+                <div class="progress-pie is-warning" data-value="66">
+                  <svg-icon type="mdi" :path="mdiRefreshCircle" width="32" height="32"></svg-icon>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
       <br />

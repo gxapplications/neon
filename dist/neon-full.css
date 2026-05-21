@@ -16184,11 +16184,11 @@ has-background-danger.is-hoverable:active {
   height: inherit;
   background-image: radial-gradient(circle, hsla(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta)), 0%) 50%, hsla(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta)), 30%));
 }
-.button:active {
+.button:active, .button.active {
   box-shadow: hsla(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta)), 30%) 0 0 11px 3px;
   text-shadow: hsl(var(--bulma-button-h), var(--bulma-button-s), calc(var(--bulma-button-background-l) + var(--bulma-button-background-l-delta))) 0 0 10px;
 }
-.button:active.is-outlined::before {
+.button:active.is-outlined::before, .button.active.is-outlined::before {
   content: "";
   position: absolute;
   left: 0;
