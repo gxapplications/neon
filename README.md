@@ -10,7 +10,7 @@ Once built, there is only one CSS, no Javascript.
 
 ## Preview
 
-[See the demo page](https://gxapplications.github.io/neon)
+[See the demo page](https://neon.rominet.monster)
 
 ## MIT License
 https://opensource.org/license/mit
