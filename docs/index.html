@@ -59,14 +59,6 @@
       <br />
 
       <section class="section is-unselectable">
-        <h2 class="title">Cards</h2>
-        <div class="container is-widescreen fixed-grid has-12-cols-desktop has-9-cols-tablet has-6-cols-mobile">
-
-        </div>
-      </section>
-      <br />
-
-      <section class="section is-unselectable">
         <h2 class="title">Advanced cards</h2>
         <div class="container is-widescreen fixed-grid has-12-cols-desktop has-9-cols-tablet has-6-cols-mobile">
           <h3 class="subtitle">Alarm states</h3>
@@ -584,6 +576,159 @@
                 </div>
               </div>
             </a>
+          </div>
+
+          <h3 class="subtitle">Keeper states</h3>
+          <div class="grid">
+            <div class="cell is-col-span-3 card compact is-link is-outlined">
+              <header class="card-header">
+                <p class="card-header-title is-centered is-size-7-mobile is-size-6">Heater 1</p>
+                <p class="card-header-icon">
+                  <svg-icon type="mdi" :path="mdiRadiatorOff"></svg-icon>
+                </p>
+              </header>
+              <footer class="card-footer tabs is-toggle is-fullwidth">
+                <ul>
+                  <li class="is-active">
+                    <a class="is-flex is-flex-direction-column">
+                      <span>OFF</span>
+                      <svg-icon type="mdi" :path="mdiRadiatorOff"></svg-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="is-flex is-flex-direction-column is-success">
+                      <span>Eco 2h</span>
+                      <svg-icon type="mdi" :path="mdiLeaf"></svg-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="is-flex is-flex-direction-column is-info">
+                      <span>Auto</span>
+                      <svg-icon type="mdi" :path="mdiRefreshAuto"></svg-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="is-flex is-flex-direction-column is-danger">
+                      <span>Cf 45'</span>
+                      <svg-icon type="mdi" :path="mdiHeatWave"></svg-icon>
+                    </a>
+                  </li>
+                </ul>
+              </footer>
+            </div>
+
+            <div class="cell is-col-span-3 card compact is-info is-outlined">
+              <header class="card-header">
+                <p class="card-header-title is-centered is-size-7-mobile is-size-6">Heater 2</p>
+                <p class="card-header-icon">
+                  <svg-icon type="mdi" :path="mdiRefreshAuto"></svg-icon>
+                </p>
+              </header>
+              <footer class="card-footer tabs is-toggle is-fullwidth">
+                <ul>
+                  <li>
+                    <a class="is-flex is-flex-direction-column">
+                      <span>OFF</span>
+                      <svg-icon type="mdi" :path="mdiRadiatorOff"></svg-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="is-flex is-flex-direction-column is-success">
+                      <span>Eco 2h</span>
+                      <svg-icon type="mdi" :path="mdiLeaf"></svg-icon>
+                    </a>
+                  </li>
+                  <li class="is-active">
+                    <a class="is-flex is-flex-direction-column is-info">
+                      <span>Auto</span>
+                      <svg-icon type="mdi" :path="mdiRefreshAuto"></svg-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="is-flex is-flex-direction-column is-danger">
+                      <span>Cf 45'</span>
+                      <svg-icon type="mdi" :path="mdiHeatWave"></svg-icon>
+                    </a>
+                  </li>
+                </ul>
+              </footer>
+            </div>
+
+            <div class="cell is-col-span-3 card compact is-success is-outlined">
+              <header class="card-header">
+                <p class="card-header-title is-centered is-size-7-mobile is-size-6">Heater 3</p>
+                <p class="card-header-icon">
+                  <svg-icon type="mdi" :path="mdiLeaf"></svg-icon>
+                </p>
+              </header>
+              <footer class="card-footer tabs is-toggle is-fullwidth">
+                <ul>
+                  <li>
+                    <a class="is-flex is-flex-direction-column">
+                      <span>OFF</span>
+                      <svg-icon type="mdi" :path="mdiRadiatorOff"></svg-icon>
+                    </a>
+                  </li>
+                  <li class="is-active">
+                    <a class="is-flex is-flex-direction-column is-success">
+                      <span>Eco 2h</span>
+                      <svg-icon type="mdi" :path="mdiLeaf"></svg-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="is-flex is-flex-direction-column is-info">
+                      <span>Auto</span>
+                      <svg-icon type="mdi" :path="mdiRefreshAuto"></svg-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="is-flex is-flex-direction-column is-danger">
+                      <span>Cf 45'</span>
+                      <svg-icon type="mdi" :path="mdiHeatWave"></svg-icon>
+                    </a>
+                  </li>
+                </ul>
+              </footer>
+            </div>
+
+            <div class="cell is-col-span-3 card compact is-danger is-outlined active">
+              <header class="card-header">
+                <p class="card-header-title is-centered is-size-7-mobile is-size-6">Heater 4</p>
+                <p class="card-header-icon">
+                <div class="progress-pie is-danger" data-value="66">
+                  <svg-icon type="mdi" :path="mdiHeatWave"></svg-icon>
+                </div>
+                </p>
+              </header>
+              <footer class="card-footer tabs is-toggle is-fullwidth">
+                <ul>
+                  <li>
+                    <a class="is-flex is-flex-direction-column">
+                      <span>OFF</span>
+                      <svg-icon type="mdi" :path="mdiRadiatorOff"></svg-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="is-flex is-flex-direction-column is-success">
+                      <span>Eco 2h</span>
+                      <svg-icon type="mdi" :path="mdiLeaf"></svg-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="is-flex is-flex-direction-column is-info">
+                      <span>Auto</span>
+                      <svg-icon type="mdi" :path="mdiRefreshAuto"></svg-icon>
+                    </a>
+                  </li>
+                  <li class="is-active">
+                    <a class="is-flex is-flex-direction-column is-danger">
+                      <span>Cf 45'</span>
+                      <svg-icon type="mdi" :path="mdiHeatWave"></svg-icon>
+                    </a>
+                  </li>
+                </ul>
+              </footer>
+            </div>
           </div>
         </div>
       </section>

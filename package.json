@@ -9,6 +9,7 @@
     "build": "npm run build-bulma && npm run build-bulma-full && cp dist/neon-full.css docs/assets/neon-full.css",
     "start": "npm run build-bulma -- --watch"
   },
+  "main": "src/main.ts",
   "dependencies": {},
   "devDependencies": {
     "bulma": "^1.0.4",
