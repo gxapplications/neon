@@ -16829,6 +16829,8 @@ has-background-danger.is-hoverable:active {
   list-style: none;
   visibility: hidden;
   display: block;
+  position: absolute;
+  top: 50%;
   z-index: 98;
 }
 .button > div.button-circular-menu > .submenu > li {
